@@ -7,6 +7,10 @@ var express = require('express')
   , server = http.createServer(app)
   , port = process.env.PORT || 3000;
 
+// Environmental variables =====================================================
+if (!process.env.STACKLEAD_API_KEY)
+  require('./config/config');
+
 // Configuration ===============================================================
 app.set('views', __dirname + 'public/views');
 app.use('/public', express.static(__dirname + '/public'));
