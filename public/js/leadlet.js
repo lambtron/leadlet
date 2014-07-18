@@ -1,3 +1,6 @@
+var DOMAIN = 'localhost:3000/';
+// var DOMAIN = 'http://leadlet.herokuapp.com/';
+
 // This is the JS that gets appended to the document.
 function getSelText() {
   var txt = '';
@@ -25,13 +28,14 @@ function getLeadInfo() {
     var http = new XMLHttpRequest();
 
     // Open a new tab/window. Send stacklead data to this namespace.
-    window.open('http://leadlet.herokuapp.com/' + namespace);
+    window.open(DOMAIN + namespace);
 
     // POST
     var data = "email=" + body + "&namespace=" + namespace;
-    var url = "http://leadlet.herokuapp.com/api/email";
+    var url = DOMAIN + "api/email";
     http.open("POST", url, true);
     http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     http.send(data);
+    console.log(data);
   }
 }

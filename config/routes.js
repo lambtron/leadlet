@@ -7,6 +7,8 @@
 	module.exports = function (app, io) {
 		// Application routes ======================================================
     app.post('/api/email', function (req, res) {
+      // console.log(req.body);
+      console.log(req);
       // email, namespace.
       var email = '';
       var namespace = '';
