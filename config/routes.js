@@ -4,7 +4,7 @@
   // Helpers ===================================================================
   var Stacklead = require('../app/helpers/stacklead');
 
-	module.exports = function (app) {
+	module.exports = function (app, io) {
 		// Application routes ======================================================
     app.post('/api/email', function (req, res) {
       // email, namespace.

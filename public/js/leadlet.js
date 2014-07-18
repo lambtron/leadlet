@@ -11,7 +11,7 @@ function getSelText() {
   return txt;
 }
 
-function getLeadInfo(email) {
+function getLeadInfo() {
   var body = getSelText();
   var namespace = ""; // Randomly generated.
 

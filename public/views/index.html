@@ -14,9 +14,9 @@
 	<!-- SCROLLS -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/public/css/index.css">
-	<!-- load bootstrap -->
 
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 </head>
 
 <!-- SET THE CONTROLLER AND GET ALL TODOS WITH INITIALIZE FUNCTION -->
@@ -29,7 +29,7 @@
 </body>
 	<script type="text/javascript">
 		$(document).ready( function() {
-			var href = "javascript:(function(){var s=document.createElement('script');s.src='http://leadlet.herokuapp.com/public/leadlet.js';document.body.appendChild(s)})();";
+			var href = "javascript:(function(){var s=document.createElement('script');s.src='http://localhost:3000/public/js/leadlet.js';document.body.appendChild(s);s.onload=function(){getLeadInfo()};})();";
 
 			// Make the draggable bookmarklet.
 			var a = document.createElement('a');
