@@ -1,3 +1,5 @@
-# Leadlet
+=======
+leadlet
+=======
 
-A nifty little bookmarklet to quickly scan leads with email address.
+Bookmarklet to quickly get lead information from email addresses.
