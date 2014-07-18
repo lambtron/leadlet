@@ -1,0 +1,50 @@
+<!-- index.html -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+
+	<title>Leadlet</title>
+
+	<!-- FAVICON -->
+	<link rel="shortcut icon" href="/public/img/favicon.png">
+
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/public/css/index.css">
+	<!-- load bootstrap -->
+
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</head>
+
+<!-- SET THE CONTROLLER AND GET ALL TODOS WITH INITIALIZE FUNCTION -->
+<body>
+	<section id="bookmarklet-container">
+		<span><p>Drag the link below to your toolbar!</p></span>
+		<div id="bookmarklet">
+		</div>
+	</section>
+</body>
+	<script type="text/javascript">
+		$(document).ready( function() {
+			var href = "javascript:(function(){var s=document.createElement('script');s.src='http://leadlet.herokuapp.com/public/leadlet.js';document.body.appendChild(s)})();";
+
+			// Make the draggable bookmarklet.
+			var a = document.createElement('a');
+			a.title = "Leadlet";
+			a.id = "link";
+			a.innerHTML = "Leadlet";
+			a.href = href;
+			$('#bookmarklet').html(a);
+			$('#bookmarklet').css( "cursor", "pointer");
+			$('#link').css('display', 'block');
+			$('#link').css('width', '100%');
+			$('#bookmarklet, #drag-arrow').animate({
+				opacity: 1
+			}, 1000);
+			$('.form > #message').html("");
+		});
+	</script>
+</html>
